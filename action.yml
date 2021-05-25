@@ -1,0 +1,19 @@
+name: "Leanpub Watch Action"
+description: "A GitHub Action that watches ongoing Leanpub builds"
+author: "Diego Zamboni <diego@zzamboni.org>"
+inputs:
+  api_key:
+    description: "Your LeanPub API key"
+    required: true
+  book_slug:
+    description:
+      "Your book SLUG. It's the part of the URL for your book after https://leanpub.com/.
+      E.g. if your book is found at https://leanpub.com/your_book, then your book's slug is your_book."
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/watch.py ${{ inputs.book_slug }}
+      shell: bash
+      env:
+        LEANPUB_API_KEY: ${{ inputs.api_key }}
