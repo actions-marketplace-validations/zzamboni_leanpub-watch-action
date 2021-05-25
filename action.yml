@@ -17,3 +17,6 @@ runs:
       shell: bash
       env:
         LEANPUB_API_KEY: ${{ inputs.api_key }}
+branding:
+  icon: book-open
+  color: gray-dark
