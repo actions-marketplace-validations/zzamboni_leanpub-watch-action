@@ -13,7 +13,7 @@ You can use this in conjunction with the existing [[https://github.com/marketpla
 
 #+begin_src yaml
 steps:
-  - uses: zzamboni/leanpub-watch-action@v1
+  - uses: zzamboni/leanpub-watch-action@v1.1
     with:
       api_key: ${{ secrets.LEANPUB_API_KEY }}
       book_slug: my_book_slug
@@ -55,7 +55,7 @@ jobs:
           api_key: ${{ secrets.LEANPUB_API_KEY }}
           book_slug: ${{ env.BOOK_SLUG }}
       - name: Monitor Leanpub build
-        uses: zzamboni/leanpub-watch-action@v1
+        uses: zzamboni/leanpub-watch-action@v1.1
         with:
           api_key: ${{ secrets.LEANPUB_API_KEY }}
           book_slug: ${{ env.BOOK_SLUG }}
