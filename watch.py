@@ -6,7 +6,7 @@ import json
 import time
 
 def action_error(msg, status=1):
-    print("::error::%s" % msg)
+    print("::error::%s" % msg, flush=True)
     sys.exit(status)
 
 def action_msg(msg):
